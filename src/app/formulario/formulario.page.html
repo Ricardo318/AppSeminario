@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registro de llegada</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content>
+    <ion-item >
+      <ion-label position="floating" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="nombre" required><strong></strong></ion-input>
+      
+     </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Apellido</ion-label>
+    <ion-input type="text" [(ngModel)]="apellido" required></ion-input>
+   </ion-item>
+
+<ion-item >
+  <ion-select style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"label="Hora de atencion"[(ngModel)]="horaatencion" required placeholder="Seleccione su hora">
+    <ion-select-option>08:00 AM</ion-select-option>
+    <ion-select-option>09:00 AM</ion-select-option>
+    <ion-select-option>10:00 AM</ion-select-option>
+    <ion-select-option>11:00 AM</ion-select-option>
+    <ion-select-option>12:00 AM</ion-select-option>
+    <ion-select-option>13:00 PM</ion-select-option>
+    <ion-select-option>14:00 PM</ion-select-option>
+    <ion-select-option>15:00 PM</ion-select-option>
+    <ion-select-option>16:00 PM</ion-select-option>
+    <ion-select-option>17:00 PM</ion-select-option>
+  </ion-select>
+</ion-item>
+
+<ion-item >
+  <ion-select style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"label="Tipo de especialidad" [(ngModel)]="especialidad" required placeholder="Seleccione area medica">
+  <ion-select-option>Medicina General</ion-select-option>
+  <ion-select-option>Dentista</ion-select-option>
+  <ion-select-option>Rayos X</ion-select-option>
+  <ion-select-option>Examenes</ion-select-option>
+  <ion-select-option>Medicina Infantil</ion-select-option>
+</ion-select>
+</ion-item>
+<br><br>
+<ion-button style="position: relative; left: 80px;"(click)="registro()">Registrar</ion-button>
+<ion-button style="position: relative; left: 100px;"routerLink="/codigo">Cancelar</ion-button>
+</ion-content>
+ 
